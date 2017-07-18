@@ -5,14 +5,14 @@ This project contains code samples to go along with these Code Conversations vid
 
 <!-- TODO add links -->
 
-  - **Introduction to MSBuild in .NET Core.**
+  - **Introduction to MSBuild in .NET Core**
     - [Video on Channel9](https://channel9.msdn.com/Shows/Code-Conversations/Introduction-to-MSBuild-in-NET-Core-with-Nate-McMaster)
     - Sample Code: [./Video-0/](./Video-0/)
-  - **Introduction to MSBuild Tasks.**
-    - Video on Channel9: link coming soon
+  - **Advanced MSBuild Extensibility: Tasks and Targets**
+    - [Video on Channel9](https://channel9.msdn.com/Shows/Code-Conversations/Advanced-MSBuild-Extensibility-with-Nate-McMaster)
     - Sample Code: [./Video-1/](./Video-1/)
-  - **Installing an MSBuild Tasks via NuGet.**
-    - Video on Channel9: link coming soon
+  - **Sharing MSBuild Tasks as NuGet Packages**
+    - [Video on Channel9](https://channel9.msdn.com/Shows/Code-Conversations/Sharing-MSBuild-Tasks-as-NuGet-Packages-with-Nate-McMaster)
     - Sample Code: [./Video-2/](./Video-2/)
 
 ### More reading

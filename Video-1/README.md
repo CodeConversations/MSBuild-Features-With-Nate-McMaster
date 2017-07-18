@@ -1,10 +1,11 @@
-Introduction to MSBuild Tasks
-=============================
+Advanced MSBuild Extensibility: Tasks and Targets
+=================================================
 
 This sample code shows how to build a sample MSBuild task using C# and .NET Standard.
 
-<!-- TODO add link -->
-Watch the video on Channel 9 for an introduction to the sample code.
+Watch the [video on Channel 9][video-link] for an introduction to the sample code.
+
+[video-link]: https://channel9.msdn.com/Shows/Code-Conversations/Advanced-MSBuild-Extensibility-with-Nate-McMaster
 
 For more details:
 

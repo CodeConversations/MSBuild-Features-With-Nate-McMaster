@@ -1,10 +1,11 @@
-Installing an MSBuild Tasks via NuGet
-=====================================
+Sharing MSBuild Tasks as NuGet Packages
+=======================================
 
 This sample code shows how to take a sample MSBuild task and put it into a NuGet package.
 
-<!-- TODO add link -->
-Watch the video on Channel 9 for an introduction to the sample code.
+Watch the [video on Channel 9][video-link] for an introduction to the sample code.
+
+[video-link]: https://channel9.msdn.com/Shows/Code-Conversations/Sharing-MSBuild-Tasks-as-NuGet-Packages-with-Nate-McMaster
 
 For more details:
 

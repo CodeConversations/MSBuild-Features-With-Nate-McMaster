@@ -3,7 +3,9 @@ Introduction to MSBuild in .NET Core
 
 This sample code shows a few basic techniques for using MSBuild in a .NET Core project.
 
-Watch the [video on Channel9](https://channel9.msdn.com/Shows/Code-Conversations/Introduction-to-MSBuild-in-NET-Core-with-Nate-McMaster) to learn more about the basics of using MSBuild on .NET Core.
+Watch the [video on Channel9][video-link] to learn more about the basics of using MSBuild on .NET Core.
+
+[video-link]: https://channel9.msdn.com/Shows/Code-Conversations/Introduction-to-MSBuild-in-NET-Core-with-Nate-McMaster
 
 For more details:
 
