@@ -1,0 +1,14 @@
+<!--
+  NuGet automatically imports this file into any project that has a PackageReference to 'SampleTasks'.
+
+  To see this in action, execute "dotnet restore" on the 3-NuGet example and look in the obj/ folder for
+  a file named Web.csproj.g.nuget.targets. You'll see inside that it contains an "Import" to this file.
+ -->
+<Project>
+
+  <!-- This will automatically produce a zip file will all contents of the publish directory. -->
+  <Target Name="ZipOnPublish" AfterTargets="Publish">
+    <Zip Directory="$(PublishDir)" ZipPath="$(MSBuildProjectDirectory)\$(MSBuildProjectName).zip" />
+  </Target>
+
+</Project>

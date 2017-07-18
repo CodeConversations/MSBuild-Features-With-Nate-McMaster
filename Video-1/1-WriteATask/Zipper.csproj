@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    This project is a simplified version of what I showed in the 3rd video.
+    The complete version is in the Video-2 folder and contains more settings
+    required to make the project a NuGet package.
+  -->
+
+  <PropertyGroup>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <TargetFrameworks>netstandard1.3;net46</TargetFrameworks>
+    <!-- Compiling for .NET Framework on non-Windows systems is not yet supported-->
+    <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netstandard1.3</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NETStandard.Library" Version="1.6.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="15.1.548" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="15.1.548" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.1.548" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+
+</Project>

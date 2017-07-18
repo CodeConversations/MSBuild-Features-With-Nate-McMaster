@@ -1,0 +1,22 @@
+<Project>
+
+  <!-- This registers the task assembly with MSBuild -->
+  <UsingTask
+    TaskName="Zipper.Tasks.Zip"
+    AssemblyFile="$(MSBuildThisFileDirectory)..\1-WriteATask\bin\Debug\netstandard1.3\Zipper.dll" />
+  <!--
+    Notice this is using the netstandard1.3 assembly.
+    To make this work in MSBuild.exe instead of dotnet.exe, you would need to use the 'net46' assembly.
+  -->
+
+  <Target Name="Build">
+    <!-- This invokes the custom task. -->
+    <Zip Directory="files/" ZipPath="files.zip">
+      <!-- This is how you get the outputs of a task. -->
+      <Output TaskParameter="FilesAdded" PropertyName="FilesAdded" />
+    </Zip>
+
+    <Message Importance="High" Text="Added $(FilesAdded) file(s)"/>
+  </Target>
+
+</Project>

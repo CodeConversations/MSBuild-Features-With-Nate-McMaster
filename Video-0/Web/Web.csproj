@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+  </ItemGroup>
+
+  <!--
+    This target runs automatically from Visual Studio and command-line builds.
+    You can also run it directly by executing "msbuild /t:RunGulp".
+  -->
+  <Target Name="RunGulp" AfterTargets="Build">
+    <Exec Command="node ./node_modules/.bin/gulp compile" />
+  </Target>
+
+</Project>

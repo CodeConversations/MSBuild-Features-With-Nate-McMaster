@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    This is similar to the Zipper.csproj file from Video-1,
+    but has additional properties to make this project work well
+    as a NuGet package.
+   -->
+  <PropertyGroup>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>build-$([System.DateTime]::Now.ToString('yymmddHHmmss'))</VersionSuffix>
+    <!--
+      This changes the default folder where assemblies will be placed in the package.
+      The default is 'lib', but that is incorrect since these assemblies are mean to be used
+      by MSBuild, and to meant to be referenced as API from the NuGet package.
+    -->
+    <BuildOutputTargetFolder>tools</BuildOutputTargetFolder>
+    <!-- For the sake of demoing, put the package output into a parent folder -->
+    <PackageOutputPath>..\packages</PackageOutputPath>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <TargetFrameworks>netstandard1.3;net46</TargetFrameworks>
+    <!-- Compiling for .NET Framework on non-Windows systems is not yet supported-->
+    <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netstandard1.3</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      PrivateAssets="All" is essential. This prevents these build-only dependencies
+      from ending up in the NuGet package's list of dependencies.
+     -->
+    <PackageReference Include="NETStandard.Library" Version="1.6.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="15.1.548" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="15.1.548" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.1.548" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="build\**\*" PackagePath="build\" />
+  </ItemGroup>
+
+</Project>

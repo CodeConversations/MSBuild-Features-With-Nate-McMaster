@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <JsonNetVersion>9.0.1</JsonNetVersion>
+  </PropertyGroup>
+</Project>

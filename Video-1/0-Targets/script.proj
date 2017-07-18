@@ -1,0 +1,31 @@
+<Project>
+
+  <!-- A target defines series of build steps to perform. It is given a name and only executes once.-->
+  <Target Name="Build">
+
+    <!-- A task is a specific action or routine. It can be used multiple times.  -->
+
+    <!-- The 'WriteLinesToFile' task is built-in to MSBuild. -->
+    <WriteLinesToFile
+      Lines="Hello Channel 9!"
+      File="greeting.txt"
+      Overwrite="true" />
+
+    <Copy
+      SourceFiles="greeting.txt"
+      DestinationFiles="greeting2.txt"/>
+  </Target>
+
+  <!-- These targets are chained into the build target -->
+  <Target Name="Starting" BeforeTargets="Build">
+    <Message Text="Hello MSBuild!" Importance="High"  />
+  </Target>
+
+  <Target Name="Finished" AfterTargets="Build">
+    <!--
+      This uses an automatic MSBuild variable, MSBuildThisFileDirectory.
+      There are dozens more. See https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties
+    -->
+    <Message Text="Created text files in $(MSBuildThisFileDirectory)" Importance="High"  />
+  </Target>
+</Project>

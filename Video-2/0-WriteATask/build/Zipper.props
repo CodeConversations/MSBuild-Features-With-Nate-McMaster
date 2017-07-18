@@ -1,0 +1,19 @@
+<!--
+  NuGet automatically imports this file into any project that has a PackageReference to 'Zipper'.
+
+  To see this in action, execute "dotnet restore" on the 3-NuGet example and look in the obj/ folder for
+  a file named Web.csproj.g.nuget.props. You'll see inside that it contains an "Import" to this file.
+ -->
+<Project>
+
+  <PropertyGroup>
+    <!-- Vary which task assembly is loaded based on which runtime MSBuild is using. -->
+    <_TaskTfm Condition=" '$(MSBuildRuntimeType)' == 'Core' ">netstandard1.3</_TaskTfm>
+    <_TaskTfm Condition=" '$(MSBuildRuntimeType)' != 'Core' ">net46</_TaskTfm>
+
+    <_TaskAssembly>$(MSBuildThisFileDirectory)..\tools\$(_TaskTfm)\Zipper.dll</_TaskAssembly>
+  </PropertyGroup>
+
+  <UsingTask TaskName="Zipper.Tasks.Zip" AssemblyFile="$(_TaskAssembly)" />
+
+</Project>

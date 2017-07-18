@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <!--
+      This is all that is required to install your package into this project.
+      NuGet and MSBuild will take care of the rest.
+    -->
+    <PackageReference Include="Zipper" Version="0.1.0-*" />
+  </ItemGroup>
+
+</Project>

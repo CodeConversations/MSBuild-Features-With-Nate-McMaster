@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- The file Directory.Build.props in the parent directory is automatically imported. -->
+
+  <PropertyGroup>
+    <AssemblyName>MyApp</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <Import Project="..\SharedFiles\packages.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="$(JsonNetVersion)" />
+  </ItemGroup>
+
+</Project>

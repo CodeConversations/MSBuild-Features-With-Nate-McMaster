@@ -1,0 +1,6 @@
+<!-- Read more about Directory.Build.props: https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build -->
+<Project>
+  <PropertyGroup>
+    <Company>Contoso.com</Company>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,12 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "web-mvc",
+  "dependencies": {
+    "typescript": "2.2.2",
+    "gulp": "3.9.1"
+  },
+  "scripts": {
+    "compile": "gulp compile"
+  }
+}
